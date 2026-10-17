@@ -1,0 +1,46 @@
+project:
+  name: mlp-nids
+  seed: 42
+
+data:
+  dataset: UNSW-NB15
+  unsw_train: data/raw/UNSW_NB15_training-set.csv
+  unsw_test: data/raw/UNSW_NB15_testing-set.csv
+  target_column: label_merged
+  normal_category: Normal
+  unknown_attack_categories:
+    - Worms
+    - Shellcode
+  test_size: 0.2
+  val_size: 0.15
+
+model:
+  type: mlp
+  params:
+    hidden_layer_sizes: [256, 128, 64]
+    activation: relu
+    solver: adam
+    alpha: 0.0001
+    learning_rate_init: 0.001
+    learning_rate: adaptive
+    max_iter: 300
+    early_stopping: true
+    validation_fraction: 0.1
+    n_iter_no_change: 15
+    tol: 0.0001
+    random_state: 42
+  class_weight_power: 0.5
+
+feature_tiers:
+  tiers: [48, 40, 30, 20, 15]
+  default: 40
+
+open_set:
+  enabled: true
+  target_false_unknown_rate: 0.05
+  confidence_threshold: 0.65
+
+xai:
+  shap_background_samples: 100
+  importance_samples: 2000
+  top_k_features: 10
