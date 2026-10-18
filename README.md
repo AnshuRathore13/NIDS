@@ -8,7 +8,7 @@ A deep learning framework for robust network intrusion detection, feature-tier b
 
 ---
 
-## 📌 Key Highlights & Technical Contributions
+## Key Highlights & Technical Contributions
 - **Deep MLP Architecture**: Implemented a 3-layer neural network `(256 -> 128 -> 64)` with ReLU activations, Adam optimization, adaptive learning rates, and L2 regularization to classify multi-class cyber attacks on the 250k+ record UNSW-NB15 dataset.
 - **Severe Class Imbalance Mitigation**: Resolved extreme attack distribution skew across 9 intrusion categories via custom probability-based sample weight resampling.
 - **5-Tier Dimensionality Reduction Benchmark**: Systematically evaluated performance across 48, 40, 30, 20, and 15 feature subsets. The **30-feature tier achieved peak multi-class accuracy (70.2%) and Macro-F1 (0.665)** while slashing feature dimensionality by 37.5%.
@@ -18,7 +18,7 @@ A deep learning framework for robust network intrusion detection, feature-tier b
 
 ---
 
-## 📊 Experimental Results
+## Experimental Results
 
 ### Feature-Tier Benchmarking (UNSW-NB15)
 | Feature Set | Features | Accuracy | Precision | Recall | Macro F1 | Attack Detection Rate | False Positive Rate | ROC-AUC | ECE | Unknown (Zero-Day) AUROC |
@@ -31,7 +31,7 @@ A deep learning framework for robust network intrusion detection, feature-tier b
 
 ---
 
-## 🏗️ Project Architecture
+## Project Architecture
 ```text
 Deep-Learning-NIDS-MLP/
 ├── README.md                          # Project documentation and benchmark report
@@ -53,7 +53,7 @@ Deep-Learning-NIDS-MLP/
 
 ---
 
-## 🚀 Quickstart
+##  Quickstart
 
 ### 1. Installation
 ```bash
